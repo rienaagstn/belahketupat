@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package belahketupat;
+package jurnalriena;
 
 import java.util.Scanner;
 
@@ -11,39 +11,40 @@ import java.util.Scanner;
  *
  * @author Praktikan
  */
-public class Belahketupat {
+public class belahketupat {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-     
-    Scanner sc = new Scanner(System.in);
-     System.out.print("Masukkan Angka :");
-
-     int n = sc.nextInt();
-    //bagian atas
-    for(int x=n; x>=1; x--)
-     {
-    for(int y=x-1; y>=1; y--){
-        System.out.print(" ");
-    }
-    for(int z=1; z<=((n+1)-x)*2; z++){
-        System.out.print("*");
-     }
-        System.out.println();
-    }
+         
+   public static void main(String[] args) {
+       System.out.println("masukan angka : "); 
+       Scanner sc = new Scanner(System.in); 
+        int i; 
+        int n = sc.nextInt(); 
  
-    //bagian bawah
-    for(int i=n; i>=1; i--) {
-         for(int k=1; k<=n-i; k++){
-             System.out.print(" ");
-             }
-         for(int j=i*2; j>=1; j--){
-              System.out.print("*");
-    }
-              System.out.println();
-        }
-     }
-}
+        for (i = 0; i < (2 * n) + 1; i++) { 
  
+            for (int j = 0; j < (2 * n) + 1; j++) { 
+ 
+                if (i < n) { 
+                    if ((j > n - i) && (j < n + i)) { 
+                        System.out.print("*"); 
+                    } else { 
+                        System.out.print("0"); 
+                    } 
+                } else { 
+ 
+                    if ((j > i - n) && (j < 3*n-i)) { 
+                        System.out.print("*"); 
+                    } else { 
+                        System.out.print("0"); 
+                    } 
+ 
+                } 
+            } 
+            System.out.println(); 
+ 
+        } 
+    } 
+} 
